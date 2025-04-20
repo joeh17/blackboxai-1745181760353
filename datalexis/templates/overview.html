@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Datalexis - Data Overview</title>
+</head>
+<body>
+    <h1>Datalexis - Data Overview</h1>
+    <a href="{{ url_for('visualization') }}">Go to Visualization</a> | 
+    <a href="{{ url_for('download_report') }}">Download Report</a> | 
+    <a href="{{ url_for('index') }}">Upload New Dataset</a>
+    <h2>Data Head</h2>
+    {{ head|safe }}
+    <h2>Summary Statistics</h2>
+    {{ summary|safe }}
+</body>
+</html>
