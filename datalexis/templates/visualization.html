@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Datalexis - Visualization</title>
+</head>
+<body>
+    <h1>Datalexis - Visualization</h1>
+    <a href="{{ url_for('overview') }}">Go to Overview</a> | 
+    <a href="{{ url_for('download_report') }}">Download Report</a> | 
+    <a href="{{ url_for('index') }}">Upload New Dataset</a>
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% else %}
+    {{ plot|safe }}
+    {% endif %}
+</body>
+</html>
